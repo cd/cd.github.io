@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
-    <title>Why 'setTimeout' Is the Better 'setInterval' in JavaScript - Christian Diederich - Web, Engineering & More</title>
+    <title>Timer Management in JavaScript for Polling Web Apps - Christian Diederich - Web, Engineering & More</title>
     <style type="text/css">@font-face{font-family:icons;src:url(/font/icons.eot?6513686);src:url(/font/icons.eot?6513686#iefix) format('embedded-opentype'),url(/font/icons.woff2?6513686) format('woff2'),url(/font/icons.woff?6513686) format('woff'),url(/font/icons.ttf?6513686) format('truetype'),url(/font/icons.svg?6513686#icons) format('svg');font-weight:400;font-style:normal}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(/font/open-sans-v17-latin-regular.woff2) format('woff2'),url(/font/open-sans-v17-latin-regular.woff) format('woff')}@font-face{font-family:'Roboto Mono';font-style:normal;font-weight:400;src:local('Roboto Mono'),local('RobotoMono-Regular'),url(/font/roboto-mono-v7-latin-regular.woff2) format('woff2'),url(/font/roboto-mono-v7-latin-regular.woff) format('woff')}@keyframes headline{0%{transform:rotate(0) scaleX(1);background-color:rgba(0,110,255,0)}20%{transform:rotate(-1.4deg) scaleX(1.09);background-color:rgba(71,148,248,.5)}50%{transform:rotate(-.7deg) scaleX(1.03);background-color:rgba(0,110,255,.5)}100%{transform:rotate(-1deg) scaleX(1.05);background-color:rgba(0,110,255,.5)}}body{max-width:36em;margin:1em auto;font-family:"Open Sans",monospace;line-height:1.7em;background:#eee url(/img/bg.jpg);padding:0 1em}p{margin:1em 0}a{color:#0c4abd;text-decoration:underline}a:hover{text-decoration:none}nav{text-align:right;margin-bottom:3em}header{text-align:center}header img{width:10em;height:10em;border-radius:99em}h1{position:relative;margin:0;font-size:1.2em;font-weight:400}h2{margin:0;font-size:1.2em;font-weight:700}h2 a{text-decoration:none}main{display:flex;flex-direction:column}img{max-width:100%;height:auto}footer{font-size:.8em;color:gray;margin-top:2em;line-height:1.2em;text-align:center}footer h2{font-size:1em;font-weight:700}footer span{white-space:nowrap}footer span::after{content:'\00a0\00B7'}footer span:last-child::after{content:''}main>p:first-of-type{order:-1}ul.articles{list-style-type:none;padding-left:0}ul.articles li{margin-bottom:1em}.icon{font-family:icons}a.icon{text-decoration:none;color:#3b3b3b;font-size:1.5em;display:inline-block;transition:color .2s}a.icon:hover{color:#1678f7}.headline-wrapper{position:relative;background-color:rgba(22,120,247,.5);color:#fff;padding:1em;margin:1.5em 0}.headline-wrapper>div{position:absolute;left:0;top:0;width:100%;height:100%;animation:headline 1s;animation-delay:1s;animation-fill-mode:forwards;outline:1px solid transparent}code{font-family:'Roboto Mono',monospace;font-size:.9em;background-color:#fff}pre{background-color:#fff;padding:1em;box-shadow:.2em .2em .4em #adadad;overflow-x:auto}</style>
     <style type="text/css">
       /*
@@ -28,16 +28,16 @@
     <main>
       <div class="headline-wrapper">
         <div></div>
-        <h1>Why 'setTimeout' Is the Better 'setInterval' in JavaScript</h1>
+        <h1>Timer Management in JavaScript for Polling Web Apps</h1>
       </div>
-<p><span style="font-style:italic;color:gray;">(2019-03-03)</span> <code>setInterval</code> and <code>setTimeout</code> are popular timer functions provided by the JavaScript environment (e.g., via the browsers <code>window</code> object). Not to be misunderstood: <code>setInterval</code> is not generally bad, there are some use cases for it. However, these are usually limited to very simple tasks. In this article, I want to show you a realistic use case, which occurs in many web apps.</p>
-<p>In web apps, <code>setInterval</code> is often used to perform repetitive tasks, such as updating data from the server via an HTTP request (also called &quot;polling&quot;).</p>
+<p><span style="font-style:italic;color:gray;">(2019-11-10)</span> Polling is a very simple technique to get periodically data from a server, e.g. a REST API. There are more efficient techniques like long polling or web sockets, but simple polling is easy to use and there are no special server settings required.</p>
+<p>Anyway, polling says: 'Request server data every x seconds'. So where do we need to think about the timer management? JavaScript's <code>setInterval</code> seems to be perfect for this purpose:</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// Call 'getApiData' every 30 seconds</span>
 <span class="hljs-built_in">window</span>.setInterval(getApiData , <span class="hljs-number">30000</span>);
 </code></pre>
-<p>This is not a good approach. Not because &quot;polling&quot; is old-school (that's not), but the execution time of the function is unknown. Perhaps the internet is just bad, so the server response is received after 40 seconds. Undeterred, however, the client sends another request after 30 seconds. The internet connection is now even busier. And so on.</p>
+<p>This is actually not a good approach because the execution time of the function is unknown. The network may be slow and the server response may take 40 seconds to be received. Undeterred, however, the client sends another request after 30 seconds. The network is now even busier. And so on.</p>
 <p><img src="../img/setinterval.png" alt="Example: When using setInterval, the responses occur irregularly and in the wrong order.">
-<img src="../img/timeout_desc.png" alt="Legend of the example diagram"></p>
+<img src="../img/timeout_desc.png" alt="Legend of the diagram"></p>
 <p>Here it makes more sense to wait 30 seconds between response and request. It does not matter how long it takes for the server to respond.</p>
 <p><img src="../img/settimeout.png" alt="Same example with 'setTimeout': Now the responses are better distributed over time"></p>
 <p>Now the responses are better distributed over time. The implementation is a bit more complicated:</p>
@@ -57,6 +57,7 @@ getApiData();
 <ul>
 <li>The server is too busy and does not respond within a particular time (timeout)</li>
 <li>The client has temporarily no internet connection</li>
+<li>The browser aborts the request</li>
 <li>...</li>
 </ul>
 <p>An Error has to be caught:</p>
@@ -91,11 +92,11 @@ getApiData();
 </code></pre>
 <p>But why shouldn't we call the <code>getApiData</code> function immediately inside the catch block without any timer? There are a few reasons:</p>
 <ul>
-<li>If the error occurs immediately (e.g., the user has temporarily no internet connection, or it's a systematic fault), it will be tried again immediately. The error comes again immediately, etc. This process causes performance problems.</li>
+<li>If the error occurs immediately (e.g. if the user is temporarily not connected to the internet or there is a systematic error), it will be tried again immediately. The error comes again immediately, etc. This process causes performance problems.</li>
 <li>The cause of an error is often a temporary effect caused by external influences. Time has to pass before the cause of the problem is resolved. That's why it makes no sense to try it again immediately.</li>
 <li>The direct self-call creates a recursion, which could also lead to performance problems.</li>
 </ul>
-<p>Finally, let's assume we have a refresh button. The user should have the option to update the API data manually. After the user refreshes the API data manually, the automatic refresh should be reset and wait another 30 seconds. <code>clearTimeout</code> does the reset here. For this purpose, it is necessary to save the timer ID, which the function returns.</p>
+<p>Finally, let's assume we have a refresh button. The user should have the option to update the API data manually. After the user refreshes the API data, the automatic refresh should be reset and wait another 30 seconds. <code>clearTimeout</code> does the reset here. For this purpose, it is necessary to save the timer ID, which the function returns.</p>
 <p>Here is the final code:</p>
 <pre><code class="language-javascript"><span class="hljs-keyword">let</span> timerId = <span class="hljs-literal">null</span>;
 
@@ -122,10 +123,7 @@ myButton.addEventListener(<span class="hljs-string">'click'</span>, getApiData);
 getApiData();
 </code></pre>
 <p>As you can see, the code has become more extensive than you might have thought. A simple <code>setInterval</code> is no longer sufficient for this comparatively simple use case.</p>
-<p>If you imagine your app has not just one, but multiple timers, it gets confusing very quickly. Here it is necessary to create a reusable basic structure or to create a kind of helper library.</p>
-<p>It is fair to say, however, that <code>setIntervall</code> is not fundamentally unsuitable. For quite simple and uncritical tasks, <code>setInterval</code> can be the right solution.</p>
-<p><strong>Update (2019-11-15):</strong></p>
-<p>I have created a tiny timer library for this purpose. Check it out: <a href="https://github.com/cd/interval-handler">https://github.com/cd/interval-handler</a></p>
+<p>If you imagine your app has not just one, but multiple timers, it gets confusing very quickly. For this purpose, I created a tiny timer library: <a href="https://github.com/cd/interval-handler">https://github.com/cd/interval-handler</a></p>
 <a href="/" style="text-align:center;"><span class="icon">&#xf104;</span> Back home</a>
     </main>
     <footer>
