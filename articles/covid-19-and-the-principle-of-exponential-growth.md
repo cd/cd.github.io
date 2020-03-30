@@ -63,3 +63,7 @@ The example can be represented well in a chart:
 [I developed a tool that does exactly these calculations and creates such a chart](https://cd.github.io/covid-19-calculator/). This gives an impressive sense of what the actual number of infections is and what exponential growth means.
 
 If you want to know more about the topic, I recommend [this article](https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca). Thanks for the inspiration @tomaspueyo!
+
+**Addendum from 30-03-2020**
+
+To make it clear: Of course, this is a purely analytical, but correct approach. Unfortunately, the reality has no constant input parameters. By interrupting the infection chains or quarantine regulations, the doubling time, which is included as an exponent in the equation, is changed. Likewise, if the health system is overloaded, the mortality rate increases.
