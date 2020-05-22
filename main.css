@@ -86,9 +86,7 @@ main {
   border-radius: 5em;
 }
 
-#characteristics,
-#social-links,
-#imprint {
+ul {
   list-style-type: none;
   padding        : 0;
 }
