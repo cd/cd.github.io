@@ -1,5 +1,5 @@
 # cd.github.io
 
-Private Blog Repository
+Personal website about me and my projects: Mechanical Engineering, JavaScript, Machine Learning.
 
-Please view this blog at Github Pages: https://cd.github.io
+https://cd.github.io
