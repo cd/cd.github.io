@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'Roboto Mono';
+  src        : url('RobotoMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'icons';
+  src        : url('icons.ttf') format('truetype');
+}
+
+@keyframes website-title-animation {
+  0% {
+    transform: rotate(0) scaleX(1);
+  }
+
+  20% {
+    transform: rotate(-3deg) scaleX(1.09);
+  }
+
+  50% {
+    transform: rotate(-1.5deg) scaleX(1.03);
+  }
+
+  100% {
+    transform: rotate(-2deg) scaleX(1.05);
+  }
+}
+
+body {
+  font-family   : 'Roboto Mono', monospace;
+  text-align    : center;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  line-height   : 1.7em;
+}
+
+body>header {
+  max-width: 35em;
+}
+
+a {
+  color          : #0c4abd;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+main {
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: center;
+}
+
+.project {
+  flex-basis     : 30em;
+  margin         : 0 1em 3em 1em;
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
+}
+
+.project .preview {
+  display   : block;
+  height    : 20em;
+  max-height: 20em;
+  max-width : 100%;
+  object-fit: contain;
+}
+
+.project a::after {
+  content    : ' \00a0\f105';
+  font-family: 'icons';
+}
+
+.project h2 {
+  font-size  : 1.5em;
+  font-weight: normal;
+}
+
+#logo {
+  width        : 10em;
+  height       : 10em;
+  border-radius: 5em;
+}
+
+#characteristics,
+#social-links,
+#imprint {
+  list-style-type: none;
+  padding        : 0;
+}
+
+#social-links {
+  text-align : right;
+  font-family: 'icons';
+}
+
+#social-links li {
+  display: inline-block;
+  margin : 0 0.2em;
+}
+
+#social-links li a {
+  text-decoration: none;
+  color          : #3b3b3b;
+  font-size      : 1.5em;
+  transition     : color .2s;
+}
+
+#social-links li a:hover {
+  color: #1678f7;
+}
+
+.headline {
+  margin  : 1.5em auto;
+  position: relative;
+  color   : #fff;
+  padding : 1em;
+  display : inline-block;
+}
+
+.headline.blue,
+.headline.blue>div {
+  background-color: rgba(22, 120, 247, .5);
+}
+
+.headline.gray,
+.headline.gray>div {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.headline.pink,
+.headline.pink>div {
+  background-color: rgba(127, 173, 0, 0.5);
+}
+
+.headline.gold,
+.headline.gold>div {
+  background-color: rgba(236, 193, 0, 0.5);
+}
+
+.headline>div {
+  position           : absolute;
+  left               : 0;
+  top                : 0;
+  width              : 100%;
+  height             : 100%;
+  outline            : 1px solid transparent;
+}
+
+.headline>div.animation {
+  animation          : website-title-animation 1s;
+  animation-delay    : 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.headline h1 {
+  position   : relative;
+  margin     : 0;
+  font-size  : 1.2em;
+  font-weight: normal;
+}
+
+#imprint {
+  font-size: 0.8em;
+  color    : gray;
+}
+
+#imprint li {
+  white-space: nowrap;
+  display    : inline;
+}
+
+#imprint li::after {
+  content: '\00a0\00B7';
+}
+
+#imprint li:last-child::after {
+  content: '';
+}
+
+@media (max-width: 40em) {
+  .project .preview {
+    height: auto;
+  }
+}

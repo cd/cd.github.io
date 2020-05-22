@@ -1,7 +1,7 @@
 
 .icon-location:before { content: '\e800'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
-.icon-angle-left:before { content: '\f104'; } /* '' */
+.icon-angle-right:before { content: '\f105'; } /* '' */
 .icon-xing-squared:before { content: '\f169'; } /* '' */
 .icon-twitter-squared:before { content: '\f304'; } /* '' */
 .icon-linkedin-squared:before { content: '\f30c'; } /* '' */
