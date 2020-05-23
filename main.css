@@ -14,15 +14,15 @@
   }
 
   20% {
-    transform: rotate(-3deg) scaleX(1.09);
+    transform: rotate(-6deg) scaleX(1.09);
   }
 
   50% {
-    transform: rotate(-1.5deg) scaleX(1.03);
+    transform: rotate(-3deg) scaleX(1.03);
   }
 
   100% {
-    transform: rotate(-2deg) scaleX(1.05);
+    transform: rotate(-4deg) scaleX(1.05);
   }
 }
 
