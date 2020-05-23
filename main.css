@@ -84,6 +84,8 @@ main {
   width        : 10em;
   height       : 10em;
   border-radius: 5em;
+  background   : url('https://us-central1-images-6c5d2.cloudfunctions.net/images/bg.jpg');
+  display      : inline-block;
 }
 
 ul {
@@ -141,12 +143,12 @@ ul {
 }
 
 .headline>div {
-  position           : absolute;
-  left               : 0;
-  top                : 0;
-  width              : 100%;
-  height             : 100%;
-  outline            : 1px solid transparent;
+  position: absolute;
+  left    : 0;
+  top     : 0;
+  width   : 100%;
+  height  : 100%;
+  outline : 1px solid transparent;
 }
 
 .headline>div.animation {
