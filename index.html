@@ -44,7 +44,7 @@
         <li>🧠 Machine Learning Enthusiast, and</li>
         <li>👶 Family Man.</li>
       </ul>
-      <p>I'm employed at <a href="http://www.khs.com/">KHS</a> and work on web development and digitization in the filling and packaging industry.</p>
+      <p>I'm employed at <a href="https://www.khs.com/">KHS</a> and work on web development and digitization in the filling and packaging industry.</p>
       <p style="margin-top:3em;color: #006600;">// Some of my personal projects, see below</p>
     </header>
     <main>
@@ -83,17 +83,17 @@
       </ul>
     </footer>
     <script>
-      const checkElements = () => {
-        headlines.forEach(headline => {
-          const bounding = headline.getBoundingClientRect();
+      function checkElements() {
+        for (var index = 0; index < headlines.length; index++) {
+          var bounding = headlines[index].getBoundingClientRect();
           if (bounding.top >= 0 && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-            headline.classList.add('animation');
+            headlines[index].classList.add('animation');
           }
-        });
+        }
       };
-      const headlines = document.querySelectorAll('.headline>div');
-      let timer = window.setTimeout(checkElements, 2000);
-      window.addEventListener('scroll', () => {
+      var headlines = document.querySelectorAll('.headline>div');
+      var timer = window.setTimeout(checkElements, 2000);
+      window.addEventListener('scroll', function() {
         window.clearTimeout(timer);
         timer = window.setTimeout(checkElements, 50);
       }, false);
