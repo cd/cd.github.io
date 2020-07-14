@@ -120,9 +120,9 @@ ul {
   display : inline-block;
 }
 
-.headline.blue,
-.headline.blue>div {
-  background-color: rgba(22, 120, 247, .5);
+.headline.purple,
+.headline.purple>div {
+  background-color: rgba(156, 26, 231, 0.5);
 }
 
 .headline.gray,
