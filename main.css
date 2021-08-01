@@ -120,13 +120,18 @@ ul {
   display : inline-block;
 }
 
+.headline.blue,
+.headline.blue>div {
+  background-color: rgba(19, 140, 255, 0.5);
+}
+
 .headline.purple,
 .headline.purple>div {
   background-color: rgba(156, 26, 231, 0.5);
 }
 
-.headline.gray,
-.headline.gray>div {
+.headline.red,
+.headline.red>div {
   background-color: rgba(255, 0, 0, 0.5);
 }
 
