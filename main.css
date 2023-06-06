@@ -130,13 +130,18 @@ ul {
   background-color: rgba(156, 26, 231, 0.5);
 }
 
+.headline.pink,
+.headline.pink>div {
+  background-color: rgba(235, 76, 236, 0.5);
+}
+
 .headline.red,
 .headline.red>div {
   background-color: rgba(255, 0, 0, 0.5);
 }
 
-.headline.pink,
-.headline.pink>div {
+.headline.green,
+.headline.green>div {
   background-color: rgba(127, 173, 0, 0.5);
 }
 
