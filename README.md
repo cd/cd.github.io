@@ -1,5 +1,5 @@
 # cd.github.io
 
-Personal website about me and my projects: Mechanical Engineering, JavaScript, Machine Learning.
+Personal website about me and my projects: Web, Engineering & More.
 
-https://cd.github.io
+https://diede.dev
