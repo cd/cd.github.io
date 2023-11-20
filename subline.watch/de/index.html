@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Optimieren Sie Ihre Produktion und Intralogistik mit Smartwatches. Steigern Sie die Effizienz Ihrer Anlagen, Maschinen und Prozesse durch Echtzeit-Überwachung und -Alarmierung.">
+  <meta name="author" content="Christian Diederich">
+  <meta name="copyright" content="Christian Diederich">
+  <meta name="date" content="2023-04-22">
+  <meta property="og:image" content="/assets/blog/machine-fault.jpg">
+  <meta property="og:url" content="https://www.subline.watch/de">
+  <meta property="og:title" content="Smartwatch-Assistenzsystem für Produktion und Logistik - SubLine Watch">
+  <meta property="og:description"
+    content="Optimieren Sie Ihre Produktion und Intralogistik mit Smartwatches. Steigern Sie die Effizienz Ihrer Anlagen, Maschinen und Prozesse durch Echtzeit-Überwachung und -Alarmierung.">
+  <title>Smartwatch-Assistenzsystem für Produktion und Logistik - SubLine Watch</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/subline.watch/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/subline.watch/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/subline.watch/favicon-16x16.png">
+  <link rel="manifest" href="/subline.watch/site.webmanifest">
+  <link rel="alternate" hreflang="en" href="https://www.subline.watch/en">
+  <link rel="alternate" hreflang="de" href="https://www.subline.watch/de">
+  <link rel="alternate" hreflang="x-default" href="https://www.subline.watch/en">
+  <link rel="stylesheet" type="text/css" href="/subline.watch/assets/style.css">
+  <style>@keyframes vibration{0%{transform:translate(0,0)}10%{transform:translate(-4px,-4px)}20%{transform:translate(4px,0)}30%{transform:translate(-4px,4px)}40%{transform:translate(0,-4px)}50%{transform:translate(4px,4px)}60%{transform:translate(-4px,0)}70%{transform:translate(4px,-4px)}80%{transform:translate(0,4px)}90%{transform:translate(-4px,-4px)}100%{transform:translate(0,0)}}[data-demo]{display:flex;justify-content:center;margin:0 1rem;user-select:none}.active-example{background-color:#f3f3f3;color:#5c5c5c}[data-demo]>div{position:relative}[data-demo] img{display:block;max-width:100%;max-height:50vh}[data-demo] img:not(:first-child){position:absolute;top:0;left:0;opacity:0}[data-demo-terminal]{max-width:40em;margin:0 auto;align-items:center;gap:0}@media screen and (min-width: 40rem){[data-demo-terminal]{align-items:flex-start}}.vibration img{animation:vibration .2s}#example-svg{display:block;height:7em;margin:2em auto 0;max-width:100%;box-sizing:border-box;padding:0 .5em}</style>
+</head>
+
+<body><aside data-archiving-popup style="position:fixed;width:100%;height:100%;left:0;top:0;background-color:#f0f8ffd2;z-index:99;display:flex;justify-content:center;align-items:center"><div style="width:35em;max-width:90%;background-color:white;padding:1em;box-shadow: 0 0 1em gray;"><p><strong>Sie besuchen eine archivierte Webseite.</strong></p><p>Diese Webseite war ursprünglich über www.subline.watch erreichbar. Das dort aufgeführte Produkt "SubLine Watch" wird jedoch nicht mehr angeboten. Aus Dokumentationsgründen ist die Webseite hier jedoch weiterhin zugänglich.</p><button onclick="sessionStorage.setItem('archiving', 'accepted');document.querySelector('[data-archiving-popup]').style.display='none'">Verstanden, Webseite besuchen</button></div></aside><script>if(sessionStorage.getItem('archiving')==='accepted'){document.querySelector('[data-archiving-popup]').style.display='none'}</script>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/subline.watch/de" class="button button-gray button-icon logo"><img src="/subline.watch/assets/logo.png"
+              alt="SubLine Watch Logo">Features</a></li>
+        <li><a href="/subline.watch/de/services" class="button button-gray">Services</a></li>
+        <li class="last-nav-item-left mobile-hidden"><a href="/subline.watch/de/blog" class="button button-gray">Blog</a></li>
+        <li><a href="/subline.watch/en" class="button button-gray button-icon"><img src="/subline.watch/assets/flag-usa.png"
+              alt="Flagge der USA">EN</a></li>
+        <li><a href="/subline.watch/de/kontakt" class="button button-blue">Kontaktieren</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="text-wrapper">
+      <p class="pithy">Die einfachste Smartwatch-Lösung zur Überwachung Ihrer Produktion und Logistik</p>
+    </div>
+    <section>
+      <h1 class="hidden">SubLine Watch Demo</h1>
+      <div data-demo>
+        <div>
+          <img src="/subline.watch/assets/demo-smartwatch-bg.jpg" draggable="false" />
+          <img src="/subline.watch/assets/demo-smartwatch-equipment-failure.png" draggable="false" data-screen="equipment-failure" />
+          <img src="/subline.watch/assets/demo-smartwatch-material-low.png" draggable="false" data-screen="material-low" />
+          <img src="/subline.watch/assets/demo-smartwatch-temperature.png" draggable="false" data-screen="temperature" />
+          <img src="/subline.watch/assets/demo-smartwatch-logistics.png" draggable="false" data-screen="logistics" />
+          <img src="/subline.watch/assets/demo-smartwatch-machines-overview.png" draggable="false" data-screen="machines-overview" />
+          <img src="/subline.watch/assets/demo-smartwatch-machine-data.png" draggable="false" data-screen="machine-data" />
+          <img src="/subline.watch/assets/demo-smartwatch-warehouse-overview.png" draggable="false"
+            data-screen="warehouse-overview" />
+        </div>
+      </div>
+      <div class="row" data-demo-terminal>
+        <div>
+          <h2>SubLine Watch alarmiert</h2>
+          <ul class="no-list-style">
+            <li><button class="button-gray" data-show-screen="equipment-failure">…bei Störungen im Betrieb</button>
+            </li>
+            <li><button class="button-gray" data-show-screen="material-low">…bei Materialmangel</button></li>
+            <li><button class="button-gray" data-show-screen="temperature">…bei kritischen Prozesswerten</button>
+            </li>
+            <li><button class="button-gray" data-show-screen="logistics">…bei beliebigen Ereignissen</button></li>
+          </ul>
+        </div>
+        <div>
+          <h2>SubLine Watch zeigt</h2>
+          <ul class="no-list-style">
+            <li><button class="button-gray" data-show-screen="machines-overview">…die gesamte Produktionsanlage</button>
+            </li>
+            <li><button class="button-gray" data-show-screen="machine-data">…die wichtigsten Prozesswerte</button></li>
+            <li><button class="button-gray" data-show-screen="warehouse-overview">…die Belegung des Warenlagers</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h1 class="hidden">Ein smarter Assistent für Ihre Mitarbeiter</h1>
+      <p class="pithy">Um es auf den Punkt zu bringen</p>
+      <p class="center">SubLine Watch unterstützt Ihr Shopfloor-Personal in der Fertigung und Intralogistik</p>
+      <div class="row">
+        <section>
+          <h2 class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="#228ae0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="13" r="7" />
+              <polyline points="12 10 12 13 14 13" />
+              <line x1="7" y1="4" x2="4.25" y2="6" />
+              <line x1="17" y1="4" x2="19.75" y2="6" />
+            </svg>
+            <div>Echtzeit-Alarmierung</div>
+          </h2>
+          <p>SubLine Watch reagiert blitzschnell auf kritische Ereignisse. Es vergehen in der Regel nur wenige
+            Millisekunden bis eine lautstarke Tonfolge sowie eine eindringliche Vibration der Smartwatch Ihr Personal
+            zum Handeln auffordern. Ein kurzer Blick auf das Display genügt, um die Situation richtig einschätzen zu
+            können.</p>
+        </section>
+        <section>
+          <h2 class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="#228ae0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="13" cy="4" r="1" stroke-width="2" />
+              <path d="M4 17l5 1l.75 -1.5" />
+              <path d="M15 21l0 -4l-4 -3l1 -6" />
+              <path d="M7 12l0 -3l5 -1l3 3l3 1" />
+              <line x1="18" y1="6" x2="6" y2="15" stroke="#000000" />
+            </svg>
+            <div>Laufwege einsparen</div>
+          </h2>
+          <p>Mit wenigen Handgriffen lassen sich die Zustände und Daten Ihrer Produktion und Logistik
+            ortsunabhängig einsehen. Zeitintensive Laufwege werden eingespart.</p>
+        </section>
+      </div>
+      <div class="row">
+        <section>
+          <h2 class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="#228ae0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="4" y="13" rx="2" width="5" height="7" />
+              <rect x="15" y="13" rx="2" width="5" height="7" />
+              <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+            </svg>
+            <div>Unter erschwerten Bedingungen</div>
+          </h2>
+          <p>SubLine Watch wurde für die mobilen Mitarbeiter in lautstarken, weitläufigen und
+            uneinsehbaren Umgebungen optimiert.</p>
+        </section>
+        <section>
+          <h2 class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="#228ae0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="6" y="6" width="12" height="12" rx="3" />
+              <path d="M9 18v3h6v-3" />
+              <path d="M9 6v-3h6v3" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="#228ae0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="7" y="4" width="10" height="16" rx="1" />
+              <line x1="11" y1="5" x2="13" y2="5" />
+              <line x1="12" y1="17" x2="12" y2="17.01" />
+              <line x1="19" y1="5" x2="5" y2="16" stroke="#000000" />
+            </svg>
+            <div>Komfortabel</div>
+          </h2>
+          <p>SubLine Watch funktioniert völlig autark. Die Smartwatch muss lediglich wie eine normale Uhr angelegt
+            werden. Eine komplizierte Bedienung oder das Mitführen eines Smartphones entfällt.</p>
+        </section>
+      </div>
+    </section>
+    <section>
+      <h1 class="hidden">Vorteile für Ihr Unternehmen</h1>
+      <p class="pithy">Die Vorteile liegen auf der Hand</p>
+      <p class="center">SubLine Watch hilft Ihrem Unternehmen auf einfache Weise und ohne Kompromisse</p>
+      <div class="row">
+        <section>
+          <h2 class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="#228ae0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <polyline points="3 17 9 11 13 15 21 7" />
+              <polyline points="14 7 21 7 21 14" />
+            </svg>
+            <div>Sofortige Effizienzsteigerung</div>
+          </h2>
+          <p>SubLine Watch unterstützt Ihr Shopfloor-Personal, indem es ein schnelleres und gezielteres Handeln
+            ermöglicht. Ungeplante Stillstandszeiten reduzieren sich und Arbeitsabläufe werden optimiert. Sie werden
+            profitabler und reduzieren Ihren Kostendruck.</p>
+          <p>Aufgrund der einfachen Nutzung entfällt eine zeitintensive Schulung Ihrer Mitarbeiter. Sie
+            profitieren daher schon ab dem ersten Tag von einer höheren Effizienz.</p>
+        </section>
+        <section>
+          <h2 class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="#228ae0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
+              <line x1="14.5" y1="5.5" x2="18.5" y2="9.5" />
+              <polyline points="12 8 7 3 3 7 8 12" />
+              <line x1="7" y1="8" x2="5.5" y2="9.5" />
+              <polyline points="16 12 21 17 17 21 12 16" />
+              <line x1="16" y1="17" x2="14.5" y2="18.5" />
+            </svg>
+            <div>Universell und anpassbar</div>
+          </h2>
+          <p>SubLine Watch ist für den Einsatz in Produktionsanlagen und angrenzende Bereiche wie der Intralogistik
+            entwickelt worden. Durch umfangreiche Konfigurationsmöglichkeiten können sowohl branchenspezifische
+            Besonderheiten, individuelle Wünsche als auch branchenfremde Anforderungen unkompliziert umgesetzt werden.
+          </p>
+        </section>
+      </div>
+      <div class="row">
+        <section>
+          <h2 class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="#228ae0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 12l2 2l4 -4" />
+              <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" />
+            </svg>
+            <div>Sicherer und risikoarmer Betrieb</div>
+          </h2>
+          <p>SubLine Watch ist in erster Linie ein reiner Datenempfänger, welcher mit einem Broker kommuniziert und
+            niemals direkt mit Ihren Quellsystemen.</p>
+          <p>Weiterhin verbleiben Ihre Daten ausschließlich in Ihrem Netzwerk. Unautorisierte Zugriffe können zusätzlich
+            durch eine verschlüsselte Datenübertragung sowie eine Benutzer-Authentifizierung verhindert werden.</p>
+          <p>Der Betrieb funktioniert ohne eine Cloud oder sonstige externe Abhängigkeiten. Sie haben über alles die
+            Kontrolle und bleiben unabhängig.</p>
+        </section>
+        <section>
+          <h2 class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="#228ae0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M7 7h10v6a3 3 0 0 1 -3 3h-4a3 3 0 0 1 -3 -3v-6" />
+              <line x1="9" y1="3" x2="9" y2="7" />
+              <line x1="15" y1="3" x2="15" y2="7" />
+              <path d="M12 16v2a2 2 0 0 0 2 2h3" />
+            </svg>
+            <div>Schnelle und unkomplizierte Inbetriebnahme</div>
+          </h2>
+          <p>SubLine Watch basiert auf dem MQTT-Standard und kann problemlos in Ihre bestehende Systemlandschaft
+            integriert werden. Es ist unerheblich, ob Ihre Daten aus einer SPS, einem MES oder einem anderen System
+            stammen.</p>
+          <object type="image/svg+xml" data="/assets/layout-example.svg" id="example-svg"></object>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <section>
+        <div>SubLine Watch</div>
+        <nav>
+          <ul class="no-list-style">
+            <li><a href="/subline.watch/de">Features</a></li>
+            <li><a href="/subline.watch/de/services">Services</a></li>
+            <li><a href="/subline.watch/de/releases">Releases</a></li>
+            <li><a href="/subline.watch/de/blog">Blog</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section>
+        <div>SubLine Solutions</div>
+        <nav>
+          <ul class="no-list-style">
+            <li><a href="/subline.watch/de/subline-solutions">Das Unternehmen</a></li>
+            <li><a href="/subline.watch/de/kontakt">Kontakt</a></li>
+            <li><a href="/subline.watch/de/datenschutz">Datenschutzerklärung</a></li>
+            <li><a href="/subline.watch/de/impressum">Impressum</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section>
+        <div>Partner</div>
+        <nav>
+          <ul class="no-list-style">
+            <li><a href="https://www.mpdv.com/de" target="_blank" rel="noopener noreferrer"><img src="/subline.watch/assets/mpdv.png"
+                  alt="MPDV Logo"></a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="info"><img src="/subline.watch/assets/logo.png" alt="SubLine Watch Logo">
+        <p>SubLine Watch ist der einfachste und effektivste Weg zur Überwachung Ihrer Produktion und Logistik.</p>
+        <p class="no-margin">&copy;&nbsp;2021-2023 SubLine&nbsp;Solutions</p>
+      </section>
+    </div>
+  </footer>
+  <script>let lastScreen = "equipment-failure"; const demoImageWrapper = document.querySelector("[data-demo]>div"); let timer; const screens = Array.from(document.querySelectorAll("[data-show-screen]")).map(a => a.dataset.showScreen); let nextScreen = 0; document.querySelector("[data-demo-terminal]").addEventListener("click", a => { const b = a.target.dataset.showScreen; b && (timer && clearTimeout(timer), changeScreen(b)), a.preventDefault() }); function demoClick() { changeScreen(screens[nextScreen]), ++nextScreen > screens.length - 1 && (nextScreen = 0), timer = setTimeout(demoClick, 3e3) } demoClick(); function changeScreen(a) { "machines-overview" !== a && "machine-data" !== a && "warehouse-overview" !== a && demoImageWrapper.classList.add("vibration"), window.setTimeout(() => { demoImageWrapper.classList.remove("vibration") }, 300), document.querySelector(`[data-screen=${lastScreen}]`).style.opacity = 0, document.querySelector(`[data-screen=${a}]`).style.opacity = 1, document.querySelector(`[data-show-screen=${lastScreen}]`).classList.remove("active-example"), document.querySelector(`[data-show-screen=${a}]`).classList.add("active-example"), lastScreen = a }</script>
+</body>
+
+</html>
