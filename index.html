@@ -1,171 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal website about my projects, software development, JavaScript and more.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cd.github.io">
-  <meta property="og:title" content="Christian Diederich - Web, Engineering & More">
-  <meta property="og:description"
-    content="Personal website about my projects, software development, JavaScript and more.">
-  <meta property="og:image" content="https://cd.github.io/icon.png">
-  <meta property="twitter:card" content="summary">
-  <meta property="twitter:url" content="https://cd.github.io">
-  <meta property="twitter:title" content="Christian Diederich - Web, Engineering & More">
-  <meta property="twitter:description"
-    content="Personal website about my projects, software development, JavaScript and more.">
-  <meta property="twitter:image" content="https://cd.github.io/icon.png">
-  <title>Christian Diederich - Web, Engineering & More</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <style>
-    @font-face {
-      font-family: "Roboto Mono";
-      src: url("/roboto-mono.woff2") format("woff2")
-    }
-
-    ::selection {
-      color: white;
-      background-color: #228ae0;
-    }
-
-    * {
-      line-height: 1.6em;
-    }
-
-    body {
-      font-family: 'Roboto Mono', monospace;
-      margin: 0 auto;
-      max-width: 40em;
-      padding: 0 0.5em 4em 0.5em;
-    }
-
-    #photo {
-      height: 10em;
-      width: 10em;
-      border-radius: 5em;
-      margin-top: 2em;
-      float: right;
-    }
-
-    h1 {
-      font-size: 1em;
-      font-weight: bold;
-      color: #228ae0;
-      margin: 3em 0 2em 0;
-      text-transform: lowercase;
-    }
-
-    h1::before {
-      content: '// '
-    }
-
-    a {
-      color: #357ab3;
-      text-decoration: underline;
-    }
-
-    a:hover {
-      text-decoration: none;
-    }
-
-    ul.no-list-style {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    ul {
-      padding-left: 1.7em;
-    }
-
-    li {
-      padding: 0;
-    }
-
-    ul.gap li {
-      padding: 0.2em 0;
-    }
-
-    @media (max-width: 27em) {
-      #photo {
-        margin: 0 auto;
-        display: block;
-        float: initial;
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Personal website about me, my projects, software development, JavaScript and more." />
+    <meta name="author" content="Christian Diederich" />
+    <meta name="copyright" content="Christian Diederich" />
+    <meta name="date" content="2024-05-05" />
+    <title>Christian Diederich - Web, Engineering & More</title>
+    <style>
+      @font-face {
+        font-display: swap;
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 300;
+        src: url("rubik-v28-latin-300.woff2") format("woff2");
       }
-    }
-  </style>
-</head>
 
-<body>
-  <main>
-    <section>
-      <h1 id="about">About me</h1>
-      <img src="photo.jpg" id="photo" alt="Christian Diederich">
-      <p>Hi, my name is Christian and I'm a 34-year-old</p>
-      <ul class="no-list-style">
-        <li>⚙️ Mechanical Engineer,</li>
-        <li>💻 (Web) Developer,</li>
-        <li>❤️ JavaScript Advocate,</li>
-        <li>📈 Entrepreneur, and</li>
-        <li>👶 Family Man</li>
-      </ul>
-      <p>from Dortmund, Germany.</p>
-      <p>I'm currently working as a digitalization engineer at Evonik Industries. In addition, I run various projects on
-        the side.</p>
-    </section>
-    <section>
-      <h1>Social media</h1>
-      <ul>
-        <li><a href="https://twitter.com/chrdiede">twitter</a></li>
-        <li><a href="https://github.com/cd">github</a></li>
-        <li><a href="https://www.linkedin.com/in/christian-diederich-69a322143/">linkedin</a></li>
-      </ul>
-    </section>
-    <section>
-      <h1>Some of my projects</h1>
-      <ul class="gap">
-        <li>In the <a href="https://www.zinerei.de/">Zinerei</a> I produce and publish booklets that explain various
-          software and web development topics in a simple and sketchy way.</li>
-        <li><a href="https://www.eigenheimfrage.de/">Eigenheimfrage</a> is a simple website that calculates whether
-          buying a home makes more financial sense than renting.</li>
-        <li><a href="/subline.watch/en">SubLine Watch</a> was a smartwatch solution that I
-          created for the manufacturing industry. It was a conventional smartwatch for end users, running my software,
-          which turns the device into a single-purpose device that supports workers in their daily work.</li>
-        <li><a href="https://github.com/cd/whiskey-kinetics">Whiskey Kinetics</a> is a simple
-          and realistic 2D physics engine I developed in JavaScript that runs in a browser. However, more than a PoC
-          didn't come out of it, because I stopped the development at a very early stage.</li>
-        <li><a href="https://github.com/cd/Lynch">Lynch</a> is a JavaScript framework that I developed
-          as a minimalistic alternative to established and bloated front-end frameworks. By now, the project is outdated
-          and doesn't really have a right to exist anymore.</li>
-        <li><a href="https://www.liga.guru/">Liga Guru</a> is an AI that I developed to predict soccer
-          results. It supports betting on sports events of the German Bundesliga by identifying irrational high odds of
-          betting providers.</li>
-        <li>Crillance was a fast-paced breakout logic game for Android smartphones that was a remake of
-          the C64 classic Crillion. Unfortunately, it is no longer available in the PlayStore. <a
-            href="https://www.youtube.com/watch?v=GydOaZNa208">Only a gameplay video from 2015 still exists</a>.</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <h1>Legal</h1>
-    <p>I am the owner of this website and my address is: Christian Diederich, Heinrich-Mann-Str. 1, 44141 Dortmund,
-      Germany</p>
-    <p>You can contact me by email at chrdiede&#64;gmail.com or by phone at +49 (0) 231 586 892 40.</p>
-    <p>This website is hosted by <a href="https://github.com/">GitHub</a> using <a
-        href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">GitHub Pages</a>.
-      Your IP address is temporarily stored by the hoster for security reasons. For more information, see <a
-        href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub Privacy
-        Statement</a>. Apart from that, no personal data is processed and no cookies are set.</p>
-    <p>Furthermore, this website contains links to external third-party websites whose content I have no
-      influence. Therefore, I cannot accept any liability for this third-party content.</p>
-    <h1>One more thing</h1>
-    <p>I wish you a really nice day 🙂</p>
-  </footer>
-</body>
+      ::selection {
+        background-color: #ffe260;
+      }
 
+      body {
+        font-family: "Rubik", sans-serif;
+        font-size: calc(1em + 0.3vw);
+        background-image: linear-gradient(to bottom, #5275cc1a 0vh, white 100vh);
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      * {
+        line-height: 1.5em;
+      }
+
+      main,
+      footer {
+        margin: 0 auto 2em auto;
+        max-width: 35em;
+        padding: 0 1em;
+      }
+
+      footer {
+        margin-top: 3em;
+      }
+
+      .photo-aside {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .photo-aside {
+          display: block;
+        }
+      }
+
+      .photo-aside img {
+        border-radius: 99em;
+        user-select: none;
+      }
+
+      h1,
+      h2,
+      .large {
+        font-weight: bold;
+        margin: 1.5em 0 1em 0;
+      }
+
+      h1,
+      .large {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      .hidden {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        margin: 0;
+        display: block;
+      }
+
+      ul.split {
+        margin: 1em 0;
+        padding: 0;
+      }
+
+      ul.split li {
+        display: flex;
+        gap: 0.5em;
+        margin: 0.5em 0;
+      }
+
+      ul.split li *:nth-child(1) {
+        flex-grow: 1;
+      }
+
+      ul.split li *:nth-child(2) {
+        white-space: nowrap;
+      }
+
+      a {
+        color: #2b5ad1;
+        text-decoration: underline;
+        text-decoration-thickness: 0.05em;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      .emoji {
+        width: 1.4em;
+        display: inline-block;
+      }
+
+      summary {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="hidden">About me</h1>
+      <p class="large">👋 Hi, I'm Christian Diederich</p>
+      <div class="photo-aside">
+        <div>
+          <img src="/photo.jpg" alt="Christian Diederich" />
+        </div>
+        <p>
+          This is my personal website. Here you can find some information about me and my (mostly technical) projects.
+          You can also find me on <a href="https://github.com/cd" target="_blank">GitHub</a>,
+          <a href="https://twitter.com/chrdiede" target="_blank">X</a> and
+          <a href="https://www.linkedin.com/in/christian-diederich-69a322143/" target="_blank">LinkedIn</a>.
+        </p>
+      </div>
+      <h1>CV</h1>
+      <ul class="split">
+        <li>
+          <div><span class="emoji">🌍</span> Born, raised and living in Germany</div>
+          <div>1989—</div>
+        </li>
+        <li>
+          <div><span class="emoji">💻</span> Developing (mostly for the web)</div>
+          <div>2001—</div>
+        </li>
+        <li>
+          <div><span class="emoji">🔧</span> Trained industrial mechanic</div>
+          <div>2006—2010</div>
+        </li>
+        <li>
+          <div><span class="emoji">⚙️</span> Studied mechanical engineering</div>
+          <div>2011—2016</div>
+        </li>
+        <li>
+          <div><span class="emoji">🦾</span> Advancing digital products in the manufacturing industry</div>
+          <div>2016—</div>
+        </li>
+        <li>
+          <div><span class="emoji">👶</span> Being a father</div>
+          <div>2019—</div>
+        </li>
+        <li>
+          <div><span class="emoji">📈</span> Ran my own company</div>
+          <div>2021—2023</div>
+        </li>
+      </ul>
+      <h1>Projects</h1>
+      <ul class="split">
+        <li>
+          <div>
+            <a href="https://www.eigenheimfrage.de/" target="_blank">Eigenheimfrage</a> — real estate calculator
+          </div>
+          <div>2024—</div>
+        </li>
+        <li>
+          <div><a href="/subline.watch/en" target="_blank">SubLine Watch</a> — industrial smartwatch solution</div>
+          <div>2021—2023</div>
+        </li>
+        <li>
+          <div>
+            <a href="https://github.com/cd/whiskey-kinetics" target="_blank">Whiskey Kinetics</a> — physics engine
+            library
+          </div>
+          <div>2020—</div>
+        </li>
+        <li>
+          <div><a href="https://github.com/cd/Lynch" target="_blank">Lynch</a> — front-end framework</div>
+          <div>2019—2020</div>
+        </li>
+        <li>
+          <div><a href="https://www.liga.guru/" target="_blank">Liga Guru</a> — AI to predict soccer results</div>
+          <div>2019—</div>
+        </li>
+        <li>
+          <div>
+            <a href="https://www.youtube.com/watch?v=GydOaZNa208" target="_blank">Crillance</a> — smartphone game
+          </div>
+          <div>2015—2016</div>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <details>
+        <summary>Legal</summary>
+        <p>
+          I am the owner of this website and my address is: Christian Diederich, Heinrich-Mann-Str. 1, 44141 Dortmund,
+          Germany
+        </p>
+        <p>You can contact me by email at chrdiede&#64;gmail.com or by phone at +49 (0) 231 586 892 40.</p>
+        <p>
+          This website is hosted by <a href="https://github.com/">GitHub</a> using
+          <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages"
+            >GitHub Pages</a
+          >. Your IP address is temporarily stored by the hoster for security reasons. For more information, see
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+            >GitHub Privacy Statement</a
+          >. Apart from that, no personal data is processed and no cookies are set.
+        </p>
+        <p>
+          Furthermore, this website contains links to external third-party websites whose content I have no influence.
+          Therefore, I cannot accept any liability for this third-party content.
+        </p>
+      </details>
+    </footer>
+  </body>
 </html>
