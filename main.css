@@ -14,7 +14,7 @@
 body {
   font-family: "Rubik", sans-serif;
   font-size: calc(1em + 0.3vw);
-  background-image: linear-gradient(to bottom, #5275cc30 0vh, #fdfdff 100vh);
+  background-image: linear-gradient(to bottom, #5275cc24 0vh, #fdfdff 100vh);
   font-weight: 300;
   padding: 0;
   margin: 0;
