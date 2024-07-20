@@ -8,155 +8,33 @@
       content="Personal website about me, my projects, software development, JavaScript and more." />
     <meta name="author" content="Christian Diederich" />
     <meta name="copyright" content="Christian Diederich" />
-    <meta name="date" content="2024-05-05" />
+    <meta name="date" content="2024-07-20" />
+    <meta property="og:title" content="Christian Diederich - Web, Engineering & More" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://diede.dev/android-chrome-512x512.png" />
+    <meta
+      property="og:description"
+      content="Personal website about me, my projects, software development, JavaScript and more." />
+    <meta property="og:url" content="https://diede.dev" />
     <title>Christian Diederich - Web, Engineering & More</title>
-    <style>
-      @font-face {
-        font-display: swap;
-        font-family: "Rubik";
-        font-style: normal;
-        font-weight: 300;
-        src: url("rubik-v28-latin-300.woff2") format("woff2");
-      }
-
-      ::selection {
-        background-color: #ffe260;
-      }
-
-      body {
-        font-family: "Rubik", sans-serif;
-        font-size: calc(1em + 0.3vw);
-        background-image: linear-gradient(to bottom, #5275cc1a 0vh, white 100vh);
-        font-weight: 300;
-        padding: 0;
-        margin: 0;
-        min-height: 100vh;
-      }
-
-      * {
-        line-height: 1.5em;
-      }
-
-      main,
-      footer {
-        margin: 0 auto 2em auto;
-        max-width: 35em;
-        padding: 0 1em;
-      }
-
-      footer {
-        margin-top: 3em;
-      }
-
-      .photo-aside {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-      }
-
-      @media only screen and (max-width: 600px) {
-        .photo-aside {
-          display: block;
-        }
-      }
-
-      .photo-aside img {
-        border-radius: 99em;
-        user-select: none;
-      }
-
-      h1,
-      h2,
-      .large {
-        font-weight: bold;
-        margin: 1.5em 0 1em 0;
-      }
-
-      h1,
-      .large {
-        font-size: 1.6em;
-      }
-
-      h2 {
-        font-size: 1.3em;
-      }
-
-      .hidden {
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        margin: 0;
-        display: block;
-      }
-
-      ul.split {
-        margin: 1em 0;
-        padding: 0;
-      }
-
-      ul.split li {
-        display: flex;
-        gap: 0.5em;
-        margin: 0.5em 0;
-      }
-
-      ul.split li *:nth-child(1) {
-        flex-grow: 1;
-      }
-
-      ul.split li *:nth-child(2) {
-        white-space: nowrap;
-      }
-
-      a {
-        color: #2b5ad1;
-        text-decoration: underline;
-        text-decoration-thickness: 0.05em;
-      }
-
-      a:hover {
-        text-decoration: none;
-      }
-
-      .emoji {
-        width: 1.4em;
-        display: inline-block;
-      }
-
-      summary {
-        cursor: pointer;
-      }
-
-      .highlight {
-        position: relative;
-      }
-
-      .highlight::after {
-        display: block;
-        content: "";
-        width: 100%;
-        height: 0.2em;
-        background-color: #2b5ad1;
-        position: absolute;
-        left: 0;
-        bottom: -0.1em;
-        border-radius: 0.1em;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+    <link rel="preload" href="/rubik-v28-latin-300.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <main>
-      <h1 class="hidden">About me</h1>
-      <p class="large">👋 Hi, I'm Christian <span class="highlight">Diede</span>rich</p>
+      <h1 class="hidden">About</h1>
+      <p class="large">👋 Hi, I'm Christian <span class="underline">Diede</span>rich</p>
       <div class="photo-aside">
         <div>
-          <img src="/photo.jpg" alt="Christian Diederich" />
+          <img src="/photo.jpg" width="160" height="160" alt="Photo of myself" />
         </div>
         <p>
-          This is my personal website. Here you can find some information about me and my (mostly technical) projects.
-          You can also find me on <a href="https://github.com/cd" target="_blank">GitHub</a>,
-          <a href="https://twitter.com/chrdiede" target="_blank">X</a> and
-          <a href="https://www.linkedin.com/in/christian-diederich-69a322143/" target="_blank">LinkedIn</a>.
+          This is my personal website. Here you can find some information about me as well as my (mostly technical)
+          stuff. I'm also hanging around on
+          <a href="https://github.com/cd" target="_blank">GitHub</a>,
+          <a href="https://x.com/chrdiede" target="_blank">X</a>,
+          <a href="https://www.linkedin.com/in/christian-diederich-69a322143/" target="_blank">LinkedIn</a>, and in my
+          <a href="mailto:chrdiede@gmail.com" target="_blank">e-mail</a> inbox.
         </p>
       </div>
       <h1>CV</h1>
@@ -226,27 +104,19 @@
       </ul>
     </main>
     <footer>
-      <details>
-        <summary>Legal</summary>
+      <nav>
+        <div class="underline"></div>
+        <p>That's it! 😊</p>
         <p>
-          I am the owner of this website and my address is: Christian Diederich, Heinrich-Mann-Str. 1, 44141 Dortmund,
-          Germany
+          Did you like the content? Then subscribe to my
+          <a href="https://buttondown.email/diede" target="_blank">newsletter</a> or
+          <a href="https://buttondown.email/diede/rss" target="_blank">RSS feed</a> and don't miss any new stuff!
         </p>
-        <p>You can contact me by email at chrdiede&#64;gmail.com or by phone at +49 (0) 231 586 892 40.</p>
-        <p>
-          This website is hosted by <a href="https://github.com/">GitHub</a> using
-          <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages"
-            >GitHub Pages</a
-          >. Your IP address is temporarily stored by the hoster for security reasons. For more information, see
-          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
-            >GitHub Privacy Statement</a
-          >. Apart from that, no personal data is processed and no cookies are set.
-        </p>
-        <p>
-          Furthermore, this website contains links to external third-party websites whose content I have no influence.
-          Therefore, I cannot accept any liability for this third-party content.
-        </p>
-      </details>
+        <div class="legal-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/imprint">Imprint</a>
+        </div>
+      </nav>
     </footer>
   </body>
 </html>
