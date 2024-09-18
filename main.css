@@ -83,11 +83,11 @@ ul.split li {
   margin: 0.5em 0;
 }
 
-ul.split li *:nth-child(1) {
+ul.split li > *:nth-child(1) {
   flex-grow: 1;
 }
 
-ul.split li *:nth-child(2) {
+ul.split li > *:nth-child(2) {
   min-width: 7em;
   text-align: right;
 }
